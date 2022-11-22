@@ -6,7 +6,6 @@ html {
 body {
   background-color: hsl(257deg, 40%, 49%);
   background-image: url("../images/bg-desktop.svg");
-  background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
   align-items: center;
@@ -18,10 +17,22 @@ body {
   font-weight: 400;
   min-height: 100vh;
 }
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+    text-align: center;
+    padding: 8rem;
+  }
+}
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 600px;
+  }
 }
 
 .btn {
@@ -39,9 +50,14 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+@media only screen and (max-width: 767px) {
+  .btn {
+    padding: 1.5rem 12rem;
+  }
+}
 
 .introductory__logo {
-  margin-bottom: 9rem;
+  margin-bottom: 7rem;
 }
 .introductory__wrapper {
   align-items: center;
@@ -50,8 +66,18 @@ body {
   gap: 5rem;
   margin-bottom: 2rem;
 }
+@media only screen and (max-width: 767px) {
+  .introductory__wrapper {
+    flex-direction: column;
+  }
+}
 .introductory__illustration, .introductory__content {
   flex: 1;
+}
+@media only screen and (max-width: 767px) {
+  .introductory__illustration {
+    margin-bottom: 9rem;
+  }
 }
 .introductory__title {
   color: #fff;
@@ -60,6 +86,11 @@ body {
   font-weight: 600;
   margin-bottom: 2rem;
   padding-right: 9rem;
+}
+@media only screen and (max-width: 767px) {
+  .introductory__title {
+    padding: 0;
+  }
 }
 .introductory__desc {
   color: #fff;
@@ -70,11 +101,23 @@ body {
   margin-bottom: 2rem;
   padding-right: 1.5rem;
 }
+@media only screen and (max-width: 767px) {
+  .introductory__desc {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+}
 .introductory__socials {
   align-items: center;
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
+}
+@media only screen and (max-width: 767px) {
+  .introductory__socials {
+    justify-content: center;
+    margin-top: 10rem;
+  }
 }
 .introductory__socials-logo {
   border: 1px solid #fff;
